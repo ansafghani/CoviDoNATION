@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="covidtablogo1.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoviDoNATION | Browse Items</title>
+    <!-- <link rel="stylesheet" href="allprofiel.css"> -->
+    <style type="text/css">
+        * {
+            width: auto;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(-224deg, #971b1f, #692454);
+            background: url("covidbackground.jpg") #f1f1f1;
+            background-attachment: fixed;
+            /* font-size: 1.5vw; */
+            background-repeat: repeat;
+            background-position: center;
+            padding-top: 1px;
+            text-align: left;
+
+
+            margin-top: 500px;
+            max-width: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(230, 222, 212);
+            overflow-y: scroll;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* ========================================== */
+
+        /* =========HEADER====================== */
+
+        /* ========================================== */
+        header {
+            width: 102%;
+            background-image: linear-gradient(-224deg, #971b1f, #692454);
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: inherit;
+            position: fixed;
+            margin-left: -8px;
+            margin-right: -8px;
+            height: 92px;
+            z-index: 100;
+        }
+
+        .Heading {
+            padding-top: 28px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            flex-basis: 33%;
+            max-width: 75%;
+        }
+
+        .search {
+            flex-basis: 33%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-top: 28px;
+            padding-left: 35px;
+
+        }
+
+        .search input {
+            width: 286px;
+            height: 30px;
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .search button {
+            width: 70px;
+            height: 30px;
+            border-radius: 10px;
+        }
+
+        .Login {
+            padding-top: 17px;
+            padding-left: 40px;
+            flex-basis: 33%;
+            margin-left: -100px;
+        }
+
+        .Login a {
+            color: #ffffff;
+        }
+
+        .Login i {
+            color: #000000;
+        }
+
+        .Login button {
+            width: 100px;
+            padding: 9px;
+            padding-bottom: 10px;
+            border: none;
+            outline: none;
+            transition: 0.3s;
+            padding-left: 66px;
+            color: #ffffff;
+            background-color: #ffffff00;
+            cursor: pointer;
+            letter-spacing: 2px;
+            float: right;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .Heading img {
+            width: auto;
+            height: 40px;
+        }
+
+        .fakeheader {
+            height: 67px;
+            background-color: rgb(230, 222, 212);
+        }
+
+        /* ============================================
+==================MAIN BODY==============
+============================================ */
+
+
+
+
+        .Profilelist {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 150px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 80vw;
+            box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+            background-color: #aa8c8e91;
+            padding: 25px;
+            margin: 8% auto 0;
+            text-align: left;
+            margin-top: 150px;
+            margin-bottom: 150px;
+            justify-content: space-between;
+        }
+
+        .ProfileLeft {
+            flex-basis: 50%;
+            padding-left: 15px;
+            /* margin: 40px 40px 40px 40px; */
+        }
+        .ProfileRight {
+            flex-basis: 50%;
+            padding-left: 15px;
+        }
+
+        .Profiledetails {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        .ProfileLeft button, .ProfileRight button {
+            background-color: #cb8c55;
+            color: #ffffff;
+
+            outline: none;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-left: 98px;
+            margin-top: 20px;
+        }
+
+        .submit {
+            width: 33%;
+            height: 50px;
+            background-color: #d0d1db;
+            color: black;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 15px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-left: 35%;
+            margin-top: -17px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            margin-bottom: 200px;
+        }
+
+
+        /* @media ( max-width : 700px) {
+            
+        } */
+    </style>
+</head>
+<% if(session.getAttribute("Name")==null){ response.sendRedirect("Login.jsp"); } %>
+
+    <body>
+        <header>
+            <div class="Heading">
+                <a href="home1.html"><img src="Covidlogo1.png" alt="CoviDoNATION"></a>
+            </div>
+            <div class="search">
+                <form action="#">
+                    <input type="text" placeholder=" Search Product" name="search">
+                    <button type="button">Search</button>
+                </form>
+            </div>
+            <div class="Login">
+                <button type="button">
+                    <a href="../HTML/register.html">Logout</a></button>
+                <button type="button">
+                    <a href="Donation.html">Donate Now</a>
+                </button>
+            </div>
+        </header>
+
+        <div class="fakeheader"></div>
+
+
+
+        <div class="Profilelist">
+            <div class="ProfileLeft">
+                <div class="Profiledetails">
+                    <div class="details">
+                        <form action="Display" method="post">
+                            <ul>
+                                <li>
+                                    <div id="Alltext">Product Name:</div>
+                                </li>
+                                <li>
+                                    <div id="Alltext">State:</div>
+                                </li>
+                                <li>
+                                    <div id="Alltext">City</div>
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="detailsFromDB">
+                        <ul>
+                            <li>
+                                <div class="text">
+                                    <%=request.getAttribute("C1")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="state">
+                                    <%=request.getAttribute("C2")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="city">
+                                    <%=request.getAttribute("C3")%>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="submit" name="s1" value="C">Know more</button>
+            </div>
+            <div class="ProfileRight">
+
+                <div class="Profiledetails">
+                    <div class="details">
+                        <ul>
+                            <li>
+                                <div id="Alltext">Product Name:</div>
+                            </li>
+                            <li>
+                                <div id="Alltext">State:</div>
+                            </li>
+                            <li>
+                                <div id="Alltext">City</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detailsFromDB">
+                        <ul>
+                            <li>
+                                <div class="text">
+                                    <%=request.getAttribute("D1")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="state">
+                                    <%=request.getAttribute("D2")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="city">
+                                    <%=request.getAttribute("D3")%>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="submit" name="s1" value="D">Know more</button>
+            </div>
+            <div class="ProfileLeft">
+
+                <div class="Profiledetails">
+                    <div class="details">
+                        <ul>
+                            <li>
+                                <div id="Alltext">Product Name:</div>
+                            </li>
+                            <li>
+                                <div id="Alltext">State:</div>
+                            </li>
+                            <li>
+                                <div id="Alltext">City</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detailsFromDB">
+                        <ul>
+                            <li>
+                                <div class="text">
+                                    <%=request.getAttribute("E1")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="state">
+                                    <%=request.getAttribute("E2")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="city">
+                                    <%=request.getAttribute("E3")%>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="submit" name="s1" value="E">Know more</button>
+            </div>
+            <div class="ProfileRight">
+
+                <div class="Profiledetails">
+                    <div class="details">
+                        <ul>
+                            <li>
+                                <div id="Alltext">Product Name:</div>
+                            </li>
+                            <li>
+                                <div id="Alltext">State:</div>
+                            </li>
+                            <li>
+                                <div id="Alltext">City</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detailsFromDB">
+                        <ul>
+                            <li>
+                                <div class="text">
+                                    <%=request.getAttribute("F1")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="state">
+                                    <%=request.getAttribute("F2")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="city">
+                                    <%=request.getAttribute("F3")%>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="submit" name="s1" value="F">Know more</button>
+            </div>
+            <div class="ProfileLeft">
+
+                <div class="Profiledetails">
+                    <div class="details">
+                        <ul>
+                            <li>
+                                <div id="Alltext">Product Name:</div>
+                            </li>
+                            <li>
+                                <div id="Alltext">State:</div>
+                            </li>
+                            <li>
+                                <div id="Alltext">City</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detailsFromDB">
+                        <ul>
+                            <li>
+                                <div class="text">
+                                    <%=request.getAttribute("G1")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="state">
+                                    <%=request.getAttribute("G2")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="city">
+                                    <%=request.getAttribute("G3")%>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="submit" name="s1" value="G">Know more</button>
+            </div>
+            <div class="ProfileRight">
+                <div class="Profiledetails">
+                    <div class="details">
+                        <ul>
+                            <li>
+                                <div id="Alltext">Product Name:</div>
+                            </li>
+                            <li>
+                                <div id="Alltext">State:</div>
+                            </li>
+                            <li>
+                                <div id="Alltext">City</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="detailsFromDB">
+                        <ul>
+                            <li>
+                                <div class="text">
+                                    <%=request.getAttribute("H1")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="state">
+                                    <%=request.getAttribute("H2")%>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="city">
+                                    <%=request.getAttribute("H3")%>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="submit" name="s1" value="H">Know more</button>
+            </div>
+            <!-- <div class="Profile"></div> -->
+        </div>
+        <button type="button" class="submit">
+            <a href="#"></a>
+            Cant find what yuou are looking for?
+            register a request
+            </a></button>
+        </div>
+    </body>
+    <footer> </footer>
+
+</html>

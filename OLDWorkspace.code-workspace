@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "C:\\xampp\\htdocs\\phpprogramming"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\HTML\\CoviDoNation"
+		},
+		{
+			"path": "..\\..\\3rd SEM\\OOPS\\Practical File Programs"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "PROJECT",
+		"files.associations": {
+			"2.C": "cpp",
+			"iostream": "cpp"
+		}
+	}
+}
