@@ -127,26 +127,16 @@ MAIN BODY
 .HomebannerText {
     font-size: 46px;
     line-height: 55px;
-    text-shadow: 1px 1px 1px #ffffff;
+    text-shadow: 1px 1px 1px #756262;
     padding: 400px 0 140px;
-    align-self: flex-end;
-    z-index: 1;
-    color: #c50101;
-    text-align: center;
-}
-/* .HomebannerText1{
-    font-size: 46px;
-    line-height: 55px;
-    text-shadow: 1px 1px 1px #000000;
-    padding: 400px 10px 224px;
     align-self: flex-end;
     z-index: 1;
     color: #ffffff;
     text-align: center;
-} */
+}
 
 .donatenowButton button {
-    background-color: #ff9292;
+    background-color: #646300;
     color: #ffffff;
     border: 0;
     padding: 16px 40px;
@@ -161,7 +151,7 @@ MAIN BODY
 
 .donatenowButton button:hover {
     color: #000000;
-    background-color: #d3474c;
+    background-color: #971b1f;
 }
 
 .WhyChoose {
